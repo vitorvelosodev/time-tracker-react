@@ -8,7 +8,7 @@ export default function Profile(props) {
   return (
     <div className='profile-container'>
       <section className='profile-area'>
-        <img className='profile-photo' src={`./../../src/assets/images/${props.profilePic}`} alt="Profile picture" />
+        <img className='profile-photo' src={`./images/${props.profilePic}`} alt="Profile picture" />
         <div className='profile-info'>
           <h4>Report for</h4>
           <h2>{props.firstName} {props.lastName}</h2>
