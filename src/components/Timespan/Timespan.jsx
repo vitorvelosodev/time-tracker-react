@@ -1,11 +1,11 @@
 export default function Timespan(props) {
     return (
         <h5
-            className={props.selected ? 'selected' : null}
+            className={props.selectID === props.id ? 'selected' : null}
             id={props.id}
-            onClick={props.toggle}
+            onClick={props.handleClick}
         >
-            {props.text}
+            {props.children}
         </h5>
     )
 }

@@ -1,0 +1,66 @@
+:root {
+  /* Primary colors */
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --soft-orange: hsl(43, 84%, 65%);
+
+  /* Neutral colors */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+.timer-container {
+  max-width: 330px;
+  margin: 20px auto;
+  position: relative;
+  height: 170px;
+  display: grid;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.timer-info {
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: var(--dark-blue);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 30px 30px;
+  color: white;
+  align-items: center;
+  align-self: end;
+  z-index: 1;
+}
+
+.timer-menu, .timer-previous {
+  text-align: right;
+}
+
+.timer-menu {
+  font-size: 1.2rem;
+  color: var(--pale-blue);
+}
+
+.timer-time {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.timer-previous {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--pale-blue);
+}
+
+.timer-svg {
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}

@@ -3,40 +3,7 @@ import { useState } from 'react'
 import Timespan from '../Timespan/Timespan';
 
 export default function Profile(props) {
-  const times = [
-    {
-      id: 1,
-      text: 'Daily',
-      selected: true
-    },
-    {
-      id: 2,
-      text: 'Weekly',
-      selected: false
-    },
-    {
-      id: 3,
-      text: 'Monthly',
-      selected: false
-    }
-  ];
-
-  const [timespan, setTimespan] = useState(times);
-
-  function toggleTimeSelection(id) {
-    setTimespan(prevState => prevState.map(element => element.id === id ? {...element, selected: true} : {...element, selected: false}))
-  }
-
-  const timespanElements = timespan.map((time) => {
-    return (
-      <Timespan
-          id={time.id}
-          text={time.text}
-          selected={time.selected}
-          toggle={() => toggleTimeSelection(time.id)}
-      />
-    )
-  })
+  const [selectID, setSelectID] = useState(1);
 
   return (
     <div className='profile-container'>
@@ -48,7 +15,21 @@ export default function Profile(props) {
         </div>
       </section>
       <section className='timespan-selection'>
-        {timespanElements}
+        <Timespan
+          id={1}
+          selectID={selectID}
+          handleClick={() => setSelectID(1)}
+        >Daily</Timespan>
+        <Timespan
+          id={2}
+          selectID={selectID}
+          handleClick={() => setSelectID(2)}
+        >Weekly</Timespan>
+        <Timespan
+          id={3}
+          selectID={selectID}
+          handleClick={() => setSelectID(3)}
+        >Monthly</Timespan>
       </section>
     </div>
   )
