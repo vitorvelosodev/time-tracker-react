@@ -16,23 +16,27 @@ export default function Profile(props) {
     },
     {
       id: 3,
-      text: 'Montly',
+      text: 'Monthly',
       selected: false
     }
   ];
 
-  const [timespan, setTimespan] = useState(times.map(
-    time => <h5
-              className={time.selected ? 'selected' : null}
-              id={time.id}
-              onClick={() => toggleTimeSelection(time.id)}
-            >{time.text}</h5>
-  ));
+  const [timespan, setTimespan] = useState(times);
 
   function toggleTimeSelection(id) {
-    console.log(id);
     setTimespan(prevState => prevState.map(element => element.id === id ? {...element, selected: true} : {...element, selected: false}))
   }
+
+  const timespanElements = timespan.map((time) => {
+    return (
+      <Timespan
+          id={time.id}
+          text={time.text}
+          selected={time.selected}
+          toggle={() => toggleTimeSelection(time.id)}
+      />
+    )
+  })
 
   return (
     <div className='profile-container'>
@@ -44,7 +48,7 @@ export default function Profile(props) {
         </div>
       </section>
       <section className='timespan-selection'>
-        {timespan}
+        {timespanElements}
       </section>
     </div>
   )
