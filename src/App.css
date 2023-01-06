@@ -27,7 +27,7 @@ body {
   font-size: 18px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 510px) {
   .page-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -37,13 +37,13 @@ body {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 815px) {
   .page-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 1000px) {
   .page-container {
     grid-template-columns: repeat(4, 1fr);
   }

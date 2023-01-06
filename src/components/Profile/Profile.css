@@ -70,7 +70,7 @@ h2 {
   font-weight: 400 !important;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 510px) {
   .profile-container {
     max-width: 250px;
     margin: 0;
