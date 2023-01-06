@@ -16,19 +16,19 @@ export default function Profile(props) {
       </section>
       <section className='timespan-selection'>
         <Timespan
-          id={1}
-          selectID={selectID}
-          handleClick={() => setSelectID(1)}
+          id={'daily'}
+          selectID={props.timespan}
+          handleClick={() => props.setTimespan('daily')}
         >Daily</Timespan>
         <Timespan
-          id={2}
-          selectID={selectID}
-          handleClick={() => setSelectID(2)}
+          id={'weekly'}
+          selectID={props.timespan}
+          handleClick={() => props.setTimespan('weekly')}
         >Weekly</Timespan>
         <Timespan
-          id={3}
-          selectID={selectID}
-          handleClick={() => setSelectID(3)}
+          id={'monthly'}
+          selectID={props.timespan}
+          handleClick={() => props.setTimespan('monthly')}
         >Monthly</Timespan>
       </section>
     </div>
