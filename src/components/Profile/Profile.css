@@ -24,7 +24,7 @@
 }
 
 .profile-area {
-  height: 140px;
+  padding: 30px;
   background-color: var(--blue);
   display: flex;
   justify-content: center;
@@ -53,18 +53,57 @@ h2 {
 }
 
 .timespan-selection {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  height: 60px;
+  padding: 20px 0;
 }
 
 .timespan-selection h5 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 200;
   color: var(--pale-blue);
+  text-align: center;
 }
 
 .selected {
   font-weight: 400 !important;
+}
+
+@media screen and (min-width: 500px) {
+  .profile-container {
+    max-width: 250px;
+    margin: 0;
+    grid-row-end: span 2;
+  }
+
+  .profile-area {
+    display: block;
+    padding: 30px;
+    padding-bottom: 60px;
+  }
+
+  .profile-area img {
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .timespan-selection {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 30px;
+  }
+  
+  .timespan-selection h5 {
+    text-align: left;
+  }
 }

@@ -19,7 +19,7 @@
   max-width: 330px;
   margin: 20px auto;
   position: relative;
-  height: 170px;
+  min-height: 170px;
   display: grid;
   overflow: hidden;
   border-radius: 10px;
@@ -63,4 +63,17 @@
   position: absolute;
   right: 20px;
   top: -10px;
+}
+
+@media screen and (min-width: 500px) {
+  .timer-container {
+    max-width: 250px;
+    min-height: 210px;
+    margin: 0;
+  }
+
+  .timer-info {
+    min-height: 180px;
+    margin: 0;
+  }
 }

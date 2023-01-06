@@ -26,3 +26,25 @@ body {
   background-color: var(--very-dark-blue);
   font-size: 18px;
 }
+
+@media screen and (min-width: 500px) {
+  .page-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .page-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 930px) {
+  .page-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

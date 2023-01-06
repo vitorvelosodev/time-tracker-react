@@ -19,14 +19,14 @@ function App() {
 
 
   return (
-    <>
+    <div className='page-container'>
       <Profile 
         firstName='Jeremy'
         lastName='Robson'
         profilePic='image-jeremy.png'
       />
       {timerElements}
-    </>
+    </div>
   )
 }
 
